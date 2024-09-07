@@ -40,6 +40,12 @@ body{
     padding-left: 250px;
 }
 
+.subtitle_2{
+    font-size: 30px;
+    padding-right: 800px;  
+    padding-left: 250px;
+}
+
 .emailhome{
     font-family: monospace;
     font-size: 18px;
@@ -78,4 +84,20 @@ body{
 
 .custom_li {
     margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
 }
