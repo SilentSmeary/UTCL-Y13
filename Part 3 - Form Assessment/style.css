@@ -75,3 +75,7 @@ body{
 .submit_custom{
     font-size: 14px;
 }
+
+.custom_li {
+    margin-bottom: 30px;
+}
