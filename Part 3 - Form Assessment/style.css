@@ -101,3 +101,8 @@ img {
     margin-right: auto;
     padding: 5px;
 }
+
+.custom_td{
+    padding: 10px;
+    font-size: 22px;
+}
