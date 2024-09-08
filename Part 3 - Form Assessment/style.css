@@ -1,3 +1,4 @@
+/* Navigation menu styles */
 ul {
     list-style-type: none;
     margin: 0;
@@ -22,6 +23,7 @@ li a:hover {
     background-color: #111;
 }
 
+/* Body styles */
 body{
     padding: 0;
     background-color: #333;
@@ -29,6 +31,7 @@ body{
     color: white;
 }
 
+/* Title and subtitle styles */
 .title{
     font-size: 75px;
     padding-top: 75px;
@@ -46,6 +49,7 @@ body{
     padding-left: 250px;
 }
 
+/* Email home styles */
 .emailhome{
     font-family: monospace;
     font-size: 18px;
@@ -53,22 +57,26 @@ body{
     padding-left: 250px;
 }
 
+/* Custom field styles */
 .custom_field{
     padding-right: 250px;  
     padding-left: 250px;
 }
 
+/* Submit button styles */
 .submit{
     background: #c1c2c7;
     color: black;
     border: transparent;
 }
 
+/* Textarea container styles */
 .textarea{
     padding-left: 85px;
     padding-right: 100px;
 }
 
+/* Textarea input styles */
 .textareastyle{
     background: #c1c2c7;
     color: black;
@@ -78,14 +86,17 @@ body{
     border: transparent;
 }
 
+/* Custom submit button styles */
 .submit_custom{
     font-size: 14px;
 }
 
+/* Custom list item styles */
 .custom_li {
     margin-bottom: 30px;
 }
 
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -95,6 +106,7 @@ table, td, th {
     border: 1px solid;
 }
 
+/* Image styles */
 img {
     display: block;
     margin-left: auto;
@@ -102,6 +114,7 @@ img {
     padding: 5px;
 }
 
+/* Custom table cell styles */
 .custom_td{
     padding: 10px;
     font-size: 22px;
