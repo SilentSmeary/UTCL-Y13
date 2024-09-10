@@ -1,0 +1,26 @@
+body {
+    background-color: #F0F8FF;
+    align-items: center;
+}
+
+.container {
+    border:solid 1px black;
+    display: flex;
+}
+
+.nav{
+    width:30%;
+    background-color: cornsilk;
+}
+
+.content{
+    background-color: darkturquoise;
+}
+
+img{
+    width:100px;
+}
+
+p {
+    font-family: Arial,Verdana,Tahoma, sans-serif;
+}
