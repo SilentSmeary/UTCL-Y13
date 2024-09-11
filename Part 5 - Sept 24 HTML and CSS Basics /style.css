@@ -16,16 +16,20 @@ body{
     font-size: 16px;
     color: white;
     padding-left: 115px;
+    width: 50%;
+    float: left;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-ul {
+.navbar_main {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+.navbar_li {
     float: left;
     /* border-right:1px solid #bbb; */
     padding: 2px;
@@ -51,4 +55,21 @@ li a:hover:not(.active) {
 .active {
     border-radius: 20px;
     background-color: #A3BE8C;
+}
+
+#join_now{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #A3BE8C;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+}
+
+.homepage_list{
+    margin-bottom: 10px;
 }
