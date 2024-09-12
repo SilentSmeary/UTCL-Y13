@@ -114,6 +114,20 @@ li a:hover:not(.active) {
     color: white;
 }
 
+.student_join_now_submit{
+    padding: 10px;
+    border: transparent;
+    background-color: #4C566A;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    color: white;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
 .firstname_title{
     margin-left: 2px;
     margin-bottom: 10px;
@@ -204,4 +218,53 @@ li a:hover:not(.active) {
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
+}
+
+#cv_upload{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+::file-selector-button{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4C566A;
+    border: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid;
+}
+
+.checkbox{
+    border-radius: 10px;
+    margin: 0;
+}
+
+/* Custom table cell styles */
+.custom_td{
+    padding: 10px;
+    font-size: 16px;
+}
+
+.custom_td2 {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.custom_td2{
+    align-content: center;
 }
