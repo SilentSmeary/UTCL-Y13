@@ -77,12 +77,13 @@ li a:hover:not(.active) {
 .firstname{
     padding: 10px;
     border: transparent;
-    background-color: #D8DEE9;
+    background-color: #4C566A;
     border-radius: 10px;
     font-size: 16px;
     width: 300px; /* Added this line to increase the width */
-    /* margin-left: 5px; */
-    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    color: white;
 }
 
 .firstname_title{
@@ -93,9 +94,13 @@ li a:hover:not(.active) {
 .custom_submit{
     font-size: 16px;
     padding: 10px;
-    background-color: #D8DEE9;
+    background-color: #5E81AC;
+    color: white;
     border: transparent;
     border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #join_now_content{
@@ -103,10 +108,43 @@ li a:hover:not(.active) {
     font-size: 16px;
     color: white;
     margin-left: 115px;
-    width: 1300px;
-    float: left;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    /* float: left; */
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+    /* justify-content: space-between; */
     /* border: solid; */
+}
+
+.custom_fieldset{
+    border: solid #D8DEE9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* #dropdown{
+    padding: 10px;
+    background-color: #4C566A;
+    color: white;
+    border-radius: 10px;
+    border: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+#dropdown{
+    padding: 10px;
+    border: transparent;
+    background-color: #4C566A;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 300px; /* Added this line to increase the width */
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
