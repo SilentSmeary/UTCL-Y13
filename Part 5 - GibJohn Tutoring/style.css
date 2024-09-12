@@ -20,6 +20,7 @@ body{
     float: left;
     flex-direction: column;
     justify-content: space-between;
+    /* border: solid; */
 }
 
 .navbar_main {
@@ -281,4 +282,74 @@ table, td, th {
     font-style: normal;
     box-sizing: border-box;
     padding: 10px 10px 10px 10px;
+}
+
+.moudle_img{
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+}
+
+.go_button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.go_button > a{
+    text-decoration: none;
+}
+
+.student_sign_up_button2{
+    font-size: 16px;
+    padding: 5px;
+    background-color: #4C566A;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    width: 100%;
+}
+
+#moudle_content{
+    margin-left: 115px ;;
+    /* padding-right: 100px; */
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    float: left;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid;
+}
+
+.module_container {
+    margin-top: 75px;
+    margin-left: 350px;
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the boxes */
+    gap: 20px; /* Space between the text boxes */
+}
+
+.text-box {
+    flex: 1; /* Makes both text boxes take equal width */
+}
+
+.secondary {
+    /* Optional: Add specific styles for the secondary box */
+}
+
+.slide_image{
+    width: 100px;
+}
+
+.slide_image{
+    width: 1250px;
 }
