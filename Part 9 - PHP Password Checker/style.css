@@ -1,0 +1,23 @@
+body {
+    color: white;
+    background-color: #333;
+    /* Add these properties to center the content vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Set the height to full viewport height */
+    min-height: 100vh;
+    /* Remove default margin */
+    margin: 0;
+}
+
+.centered_div {
+    /* Add these properties to ensure the div itself is centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Optional: Add some padding and a background color */
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+}
