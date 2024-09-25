@@ -27,9 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<p style='color:red;'>Error: $error</p>";
     } else {
         // If the password is valid, proceed with the database insertion
+        $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
         $sql = "INSERT INTO mem (username, password, fname, sname, email) VALUES(?,?,?,?,?)"; 
         $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "sssss", $uname, $pass, $first_name, $last_name, $email);
+        mysqli_stmt_bind_param($stmt, "sssss", $uname, $hashed_password, $first_name, $last_name, $email);
         mysqli_stmt_execute($stmt);
 
         if (mysqli_stmt_error($stmt)) {
@@ -44,3 +45,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+4
