@@ -1,25 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> 0 database - insert user</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
+
 <body>
-    <div id="container">
+    <div class="centered_div">
         <form action="reg.php" method="post">
-            <input type="text" name="username" placeholder="Enter a username" required>
+        <input type="text" name="uname" placeholder="Enter a username" required>
             <br>
             <input type="password" name="password" placeholder="Enter a password" required>
             <br>
-            <input type="text" name="fname" placeholder="Enter a first name" required>
+            <input type="password" name="cpassword" placeholder="Confirm password" required>
             <br>
-            <input type="text" name="sname" placeholder="Enter a last name" required>
+            <input type="text" name="fname" placeholder="Enter your first name" required>
             <br>
-            <input type="text" name="email" placeholder="Enter a email" required>
+            <input type="text" name="sname" placeholder="Enter your surname" required>
+            <br>
+            <input type="email" name="email" placeholder="Enter your email" required>
             <br>
             <input type="submit" value="Register">
+            <br>
         </form>
+
+        <br>
     </div>
 </body>
 </html>

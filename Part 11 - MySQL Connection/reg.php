@@ -1,48 +1,63 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'db_connect.php';
 
-    $uname = $_POST['username'];
-    $pass = $_POST['password'];
-    $first_name = $_POST['fname'];
-    $last_name = $_POST['sname'];
-    $email = $_POST['email'];
+include "db_connect.php";
 
-    // Password validation
-    $error = '';
+$usnm = $_POST['uname'];
+$pswd = $_POST['password'];
+$cpswd = $_POST['cpassword'];
+$fname = $_POST['fname'];
+$sname = $_POST['sname'];
+$email = $_POST['email'];
 
-    if (strlen($pass) < 8) {
-        $error = "Password must be at least 8 characters long.";
-    } elseif (!preg_match('/[A-Z]/', $pass)) {
-        $error = "Password must include at least one uppercase letter.";
-    } elseif (!preg_match('/[0-9]/', $pass)) {
-        $error = "Password must include at least one number.";
-    } elseif (!preg_match('/[\W]/', $pass)) {
-        $error = "Password must include at least one special character.";
-        header("location: index.html");
-    }
 
-    // If any validation error occurs, show the error message
-    if ($error) {
-        echo "<p style='color:red;'>Error: $error</p>";
-    } else {
-        // If the password is valid, proceed with the database insertion
-        $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO mem (username, password, fname, sname, email) VALUES(?,?,?,?,?)"; 
-        $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "sssss", $uname, $hashed_password, $first_name, $last_name, $email);
-        mysqli_stmt_execute($stmt);
+if($pswd!=$cpswd){
+    header("refresh:5; url=index.html");
+    echo '<br>';
+    echo"Your passwords do not match";
+}elseif(strlen($pswd)<8){
+    header("refresh:5; url=index.html");
+    echo '<br>';
+    echo"Your passwords do not match";
+} else {
+    try {
+        $sql = "SELECT username FROM mem WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(1,$usnm);
+        $stmt->execute();
 
-        if (mysqli_stmt_error($stmt)) {
-            echo "Error: " . mysqli_stmt_error($stmt);
-        } else {
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($result){
+            header("refresh:5; url=index.html");
             echo '<br>';
-            echo "New record created successfully";
-        }
+            echo "User Exists, try another name";
 
-        mysqli_stmt_close($stmt);
-        mysqli_close($conn);
+        } else {
+            try {
+
+                $hpswd = password_hash($pswd, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO mem (username, password, fname, sname, email) VALUES (?, ?, ?, ?, ?)";
+                $stmt = $conn->prepare($sql);
+
+                $stmt->bindParam(1,$usnm);
+                $stmt->bindParam(2,$hpswd);
+                $stmt->bindParam(3,$fname);
+                $stmt->bindParam(4,$sname);
+                $stmt->bindParam(5,$email);
+
+                $stmt->execute();
+                header("refresh:5; url=login.html");
+                echo '<br>';
+                echo "Successfully registered";
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+
+        }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
     }
+
+
 }
 ?>
-4
