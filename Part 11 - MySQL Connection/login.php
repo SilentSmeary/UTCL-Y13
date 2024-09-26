@@ -22,7 +22,10 @@ try {
         } else{
             session_destroy();
             echo '<br>';
-            echo "invalid password";
+            header("refresh:5; url=login.html");
+            echo "Invalid password";
+            echo '<br>';
+            echo "You will be redirected to login";
         }
 
     } else {
