@@ -3,7 +3,7 @@
 include "db_connect.php";
 
 try {
-    session_start();
+    session_start(); // It is better to start the session at the top before any credentials are added
     $usnm = $_POST['uname'];
     $pswd = $_POST['password'];
 
@@ -13,7 +13,7 @@ try {
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     if($result){
-        $_SESSION["ssnlogin"] = true;
+        $_SESSION["ssnlogin"] = true; //Array that stores data 
         $_SESSION["uname"] = $usnm;
         $password = $result["password"];
         if (password_verify($pswd, $password)) {
