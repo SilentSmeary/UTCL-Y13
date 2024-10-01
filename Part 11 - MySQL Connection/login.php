@@ -13,11 +13,12 @@ try {
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     if($result){
-        $_SESSION["ssnlogin"] = true; //Array that stores data 
+        $_SESSION["ssnlogin"] = true; //Array that stores data
         $_SESSION["uname"] = $usnm;
+        $_SESSION["userid"] = $result["id"];
         $password = $result["password"];
         if (password_verify($pswd, $password)) {
-            header("location:prof.php");
+            header("location:profile.php");
             exit();
         } else{
             session_destroy();
