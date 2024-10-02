@@ -53,6 +53,7 @@ foreach($result as $key=>$value){  //runs loop to go through each of the returne
 
 }
 echo "<input type='submit'' value='Update'>";  //outputs button to allow update to be called
+echo "<button type='submit' name='logout' value='logout'><a href='change_password.html'>Change Password</a></button>";
 ?>
 
 </body>
