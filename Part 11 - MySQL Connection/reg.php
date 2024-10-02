@@ -17,6 +17,7 @@ $cpswd = $_POST['cpassword'];
 $fname = $_POST['fname'];
 $sname = $_POST['sname'];
 $email = $_POST['email'];
+$signupdate = date("Y-m-d");
 
 
 if($pswd!=$cpswd){
@@ -45,7 +46,7 @@ if($pswd!=$cpswd){
             try {
 
                 $hpswd = password_hash($pswd, PASSWORD_DEFAULT);
-                $sql = "INSERT INTO mem (username, password, fname, sname, email) VALUES (?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO mem (username, password, fname, sname, email, signup) VALUES (?, ?, ?, ?, ?, ?)";
                 $stmt = $conn->prepare($sql);
 
                 $stmt->bindParam(1,$usnm);
@@ -53,6 +54,7 @@ if($pswd!=$cpswd){
                 $stmt->bindParam(3,$fname);
                 $stmt->bindParam(4,$sname);
                 $stmt->bindParam(5,$email);
+                $stmt->bindParam(6,$signupdate);
 
                 $stmt->execute();
                 header("refresh:5; url=login.html");
