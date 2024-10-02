@@ -16,13 +16,42 @@ try {  //try this code, catch errors
         $_SESSION["ssnlogin"] = true;
         $_SESSION["uname"] = $usnm;
         $_SESSION["userid"] = $result["userid"];
+
+        $act = "success_login";
+        $audit_uid = $_SESSION["userid"];
+        $source = "login.php";
+        $logtime = time();
+
         $password = $result["password"];
         if (password_verify($pswd, $password)) {
+            $sql = "INSERT INTO audit_log (user_id, activity_type, source, date) VALUES(?, ?, ?, ?)";
+
+            $stmt = $conn->prepare($sql);
+
+            $stmt->bindParam(1,$audit_uid);
+            $stmt->bindParam(2,$act);
+            $stmt->bindParam(3,$source);
+            $stmt->bindParam(4,$logtime);
+
+            $stmt->execute();
             header("location:profile.php");
             exit();
         } else{
+            $act = "failed_login";
+            $source = "login.php";
+            $logtime = time();
+            $sql = "INSERT INTO audit_log (user_id, activity_type, source, date) VALUES(?, ?, ?, ?)";
+
+            $stmt = $conn->prepare($sql);
+
+            $stmt->bindParam(1,$audit_uid);
+            $stmt->bindParam(2,$act);
+            $stmt->bindParam(3,$source);
+            $stmt->bindParam(4,$logtime);
+
+            $stmt->execute();
             session_destroy();
-            // header("location:index.html");
+            header("location:index.html");
             echo "invalid password";
         }
 
