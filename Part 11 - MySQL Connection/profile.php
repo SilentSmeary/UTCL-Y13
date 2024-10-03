@@ -43,7 +43,7 @@ echo "<form method='post' action='updater.php'>";  //echos out start of the form
 
 foreach($result as $key=>$value){  //runs loop to go through each of the returned items
 
-    if($key=="userid"){  // if its the userid data
+    if($key=="userid" or $key=="signup"){  // if its the userid data
         echo $key.": ". $value."<br>";  //echo out as text, not editable
     } elseif ($key!="password"){  //if its the password data, don't output
         echo "<label for='".$key."'>".$key."</label>";  //produce label and form element using data in assoc array
