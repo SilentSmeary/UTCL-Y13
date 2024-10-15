@@ -1,0 +1,357 @@
+body{
+    background-color: #2E3440;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#heading{
+    padding-left: 100px;
+    padding-top: 50px;
+    color: white;
+}
+
+#content{
+    padding-right: 100px;
+    font-size: 16px;
+    color: white;
+    padding-left: 115px;
+    width: 50%;
+    float: left;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: solid; */
+}
+
+.navbar_main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar_li {
+    float: left;
+    /* border-right:1px solid #bbb; */
+    padding: 2px;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #4C566A;
+    border-radius: 20px;
+}
+
+.active {
+    border-radius: 20px;
+    background-color: #A3BE8C;
+}
+
+.active2 {
+    border-radius: 20px;
+    background-color: #88C0D0;
+}
+
+#join_now{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #A3BE8C;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+}
+
+#join_now2{
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #5E81AC;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+}
+
+#submit{
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #5E81AC;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+}
+
+.homepage_list{
+    margin-bottom: 10px;
+}
+
+.firstname{
+    padding: 10px;
+    border: transparent;
+    background-color: #4C566A;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 300px; /* Added this line to increase the width */
+    margin-left: 5px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+td{
+    vertical-align: middle; /* Vertically center the input */
+}
+
+.student_join_now_submit{
+    padding: 10px;
+    border: transparent;
+    background-color: #4C566A;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    color: white;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.firstname_title{
+    margin-left: 2px;
+    margin-bottom: 10px;
+}
+
+.custom_submit{
+    font-size: 16px;
+    padding: 10px;
+    background-color: #5E81AC;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#join_now_content{
+    padding-right: 100px;
+    font-size: 16px;
+    color: white;
+    margin-left: 115px;
+    /* float: left; */
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+    /* justify-content: space-between; */
+    /* border: solid; */
+}
+
+.custom_fieldset{
+    border: solid #D8DEE9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.custom_fieldset2{
+    border: solid #D8DEE9;
+    padding: 20px;
+    margin-bottom: 300px;
+    border-radius: 8px; /* Rounded corners */
+    padding-bottom: 30px;
+}
+
+#dropdown{
+    padding: 10px;
+    border: transparent;
+    background-color: #4C566A;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 300px; /* Added this line to increase the width */
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.custom_textarea{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #4C566A;
+    border: transparent;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box; /* Added this line */
+    padding: 10px 10px 10px 10px;
+}
+
+#terms_conditions{
+    color: white;
+    text-decoration: none;
+}
+
+.student_sign_up_button{
+    font-size: 16px;
+    padding: 10px;
+    background-color: #4C566A;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+#cv_upload{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+::file-selector-button{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4C566A;
+    border: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+.checkbox{
+    border-radius: 10px;
+    margin: 0;
+}
+
+.custom_td2 {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.custom_td2{
+    align-content: center;
+}
+
+.enquiries{
+    width: 100%;
+    /* height: 100px; */
+    border-radius: 10px;
+    background-color: #4C566A;
+    border: transparent;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
+}
+
+.moudle_img{
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+}
+
+.go_button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.go_button > a{
+    text-decoration: none;
+}
+
+.student_sign_up_button2{
+    font-size: 16px;
+    padding: 5px;
+    background-color: #4C566A;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    width: 100%;
+}
+
+#moudle_content{
+    margin-left: 115px ;;
+    /* padding-right: 100px; */
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    float: left;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid;
+}
+
+.module_container {
+    margin-top: 75px;
+    margin-left: 350px;
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the boxes */
+    gap: 20px; /* Space between the text boxes */
+}
+
+.text-box {
+    flex: 1; /* Makes both text boxes take equal width */
+}
+
+.secondary {
+    /* Optional: Add specific styles for the secondary box */
+}
+
+.slide_image{
+    width: 100px;
+}
+
+.slide_image{
+    width: 1250px;
+}
+
+#content_image{
+    width: 500px
+}
+
+.input2{
+    content-
+}
