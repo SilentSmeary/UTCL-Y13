@@ -20,27 +20,38 @@
 
     <div id="container">
         <div id="heading">
-            <h1>Sign In</h1>
+            <h1>Register</h1>
         </div>
         <div id="content">
-            <form action="">
+            <form action="register.php" method="post">
                 <table>
                     <tr>
                         <th><label for="first_name">First Name:</label></th>
-                        <td><input class="input2" type="text" id="first_name" name="first_name"></td>
+                        <td><input class="firstname " type="text" id="first_name" name="first_name"></td>
                     </tr>
                     <tr>
                         <th><label for="last_name">Last Name:</label></th>
-                        <td><input class="input2" type="text" id="last_name" name="last_name"></td>
+                        <td><input class="firstname" type="text" id="last_name" name="last_name"></td>
                     </tr>
                     <tr>
                         <th><label for="username">Username:</label></th>
                         <td><input class="firstname" type="text" id="username" name="username"></td>
                     </tr>
+                    <tr>
+                        <th><label for="email">Email:</label></th>
+                        <td><input class="firstname" type="text" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="password">Password:</label></th>
+                        <td><input class="firstname" type="password" id="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="confirm_password">Confirm Password:</label></th>
+                        <td><input class="firstname" type="password" id="confirm_password" name="confirm_password"></td>
+                    </tr>
                 </table>
                 <br>
-                <!-- <input class="custom_submit" type="submit" name="" id=""> -->
-                <a class="student_sign_up_button" href="logged_in_homepage.html">Submit</a>
+                <input class="custom_submit" type="submit" name="" id="">                
             </form>
         </div>
     </div>

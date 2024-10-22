@@ -336,10 +336,6 @@ td{
     flex: 1; /* Makes both text boxes take equal width */
 }
 
-.secondary {
-    /* Optional: Add specific styles for the secondary box */
-}
-
 .slide_image{
     width: 100px;
 }
@@ -350,8 +346,4 @@ td{
 
 #content_image{
     width: 500px
-}
-
-.input2{
-    content-
 }
