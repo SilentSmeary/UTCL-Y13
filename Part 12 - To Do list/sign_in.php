@@ -14,7 +14,7 @@ try {  //try this code, catch errors
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     if($result){
         $_SESSION["ssnlogin"] = true;
-        $_SESSION["uname"] = $usnm;
+        $_SESSION["first_name"] = $result["first_name"];
         $_SESSION["user_id"] = $result["user_id"];
 
         $defin = "success_login";
@@ -38,9 +38,7 @@ try {  //try this code, catch errors
             exit();
         } else{
             $defin = "failed_login";
-            $audit_uid = $_SESSION["userid"];
-            echo "user id";
-            echo $audit_uid;
+            $audit_uid = $_SESSION["user_id"];
             $source = "login.php";
             $logtime = date("U");
             $sql = "INSERT INTO audit_log (user_id, source, definition, date) VALUES(?, ?, ?, ?)";

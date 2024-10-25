@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>To Do List | Sign In</title>
+    <title>To Do List | New List</title>
 </head>
 <body>
     <ul class="navbar_main">
@@ -20,23 +20,21 @@
 
     <div id="container">
         <div id="heading">
-            <h1>Sign In</h1>
+            <h1>Create a new list</h1>
         </div>
         <div id="content">
-            <form action="sign_in.php" method="post">
+            <form action="create_a_list.php" method="post">
                 <table>
                     <tr>
-                        <th><label for="email">Email: *</label></th>
-                        <td><input class="firstname" type="text" id="email" name="email" required></td>
+                        <th><label for="list_name">List Name: *</label></th>
+                        <td><input class="firstname " type="text" id="list_name" name="list_name" required></td>
                     </tr>
                     <tr>
-                        <th><label for="password">Password: *</label></th>
-                        <td><input class="firstname" type="password" id="password" name="password" required></td>
+                        <th><label for="list_description">List Description: *</label></th>
+                        <td><input class="firstname" type="text" id="list_description" name="list_description" required></td>
                     </tr>
                 </table>
-                <br>
-                <input class="custom_submit" type="submit" name="" id="">
-                <!-- <a class="student_sign_up_button" href="logged_in_homepage.html">Submit</a> -->
+                <input class="custom_submit" type="submit" name="" id="">                
             </form>
         </div>
     </div>

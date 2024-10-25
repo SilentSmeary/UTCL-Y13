@@ -347,3 +347,33 @@ td{
 #content_image{
     width: 500px
 }
+
+#logout-btn {
+    height: 36px;
+    float: right;
+    margin-right: 100px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    padding: 20px;
+    border: transparent;
+    /* border-radius: 20px; */
+    /* text-decoration: none; */
+    border-radius: 20px;
+    background-color: #88C0D0;
+}
+
+#heading h1 {
+    overflow: hidden; /* This ensures the heading contains the floated button */
+}
+
+.custom_table{
+    color: white;
+}
+
+.custom_table td{
+    padding-right: 50px;
+}
+.custom_tr{
+    padding-right: 100px;
+}

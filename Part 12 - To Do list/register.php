@@ -11,7 +11,6 @@
 
 include "db_connect.php";
 
-$usnm = $_POST['username'];
 $pswd = $_POST['password'];
 $cpswd = $_POST['confirm_password'];
 $fname = $_POST['first_name'];
@@ -30,7 +29,7 @@ if($pswd!=$cpswd){
     echo"Your passwords do not match";
 } else {
     try {
-        $sql = "SELECT username FROM users WHERE username = ?";
+        $sql = "SELECT email FROM users WHERE email = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(1,$usnm);
         $stmt->execute();
@@ -40,21 +39,18 @@ if($pswd!=$cpswd){
         if($result){
             header("refresh:5; url=index.html");
             echo '<br>';
-            echo "User Exists, try another name";
+            echo "Someone is already using this email please try again!";
 
         } else {
             try {
-
                 $hpswd = password_hash($pswd, PASSWORD_DEFAULT);
-                $sql = "INSERT INTO users (username, password, first_name, last_name, email, sign_up_date) VALUES (?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO users (first_name, last_name, email, password, sign_up_date) VALUES (?, ?, ?, ?, ?)";
                 $stmt = $conn->prepare($sql);
-
-                $stmt->bindParam(1,$usnm);
-                $stmt->bindParam(2,$hpswd);
-                $stmt->bindParam(3,$fname);
-                $stmt->bindParam(4,$sname);
-                $stmt->bindParam(5,$email);
-                $stmt->bindParam(6,$signupdate);
+                $stmt->bindParam(1,$fname);
+                $stmt->bindParam(2,$sname);
+                $stmt->bindParam(3,$email);
+                $stmt->bindParam(4,$hpswd);
+                $stmt->bindParam(5,$signupdate);
 
                 $stmt->execute();
                 header("refresh:5; url=sign_in.html");
