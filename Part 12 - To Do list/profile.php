@@ -36,12 +36,12 @@ echo "<table class='custom_table'>";
 
 echo "<table class='custom_table'>";
 foreach ($result as $row) {
-    echo "<form action='listadmin.php' method='POST' name='form_".$row['listid']."'>";
-    echo "<input type='hidden' name='lid' value='".$row['listid']."'>";
+    echo "<form action='list_admin.php' method='POST' name='form_".$row['list_id']."'>";
+    echo "<input type='hidden' name='lid' value='".$row['list_id']."'>";
     echo "<tr>";
     echo "<td>List Name: ".$row['list_name']."</td>";
     echo "<td>List Description: ".$row['list_description']."</td>";
-    echo "<td>Date: ".date("Y-m-d H:i", $row['date'])."</td>";
+    echo "<td>Date: ".date("Y-m-d H:i", $row['list_date_creation'])."</td>";
     echo "<td><input type='submit' name='edit' value='Edit'></td>";
     echo "<td><input type='submit' name='delete' value='Delete'></td>";
     echo "</tr>";
