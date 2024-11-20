@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "to-do-list";
-$password = "change-password";
+$password = "Password-Changed";
 $dbname = "to-do-list";
 
 try {
